@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
 body {
   box-sizing: border-box;
   background-color: #000;
@@ -397,6 +405,36 @@ a {
   gap: 15px;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  color: var(--text-color);
+  gap: 10px;
+  border-bottom: 1px solid var(--primary-color);
+  margin-bottom: 0;
+  padding: 10px;
+  width: 100%;
+}
+
+#scroll-top {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--text-color);
+  cursor: pointer;
+  display: none;
+  
+  transition: opacity 0.3s ease;
+  box-shadow: 0 0 20px #333;
+
+
+  z-index: 1000;
+}
+
 @media (max-width: 780px) {
   .heroContainers {
     justify-content: space-around;
@@ -485,6 +523,10 @@ a {
     margin: 10px;
   }
 
+  .navBar nav ul li i {
+    margin-right: 10px;
+  }
+
   .navBar nav ul li:hover a {
     color: var(--primary-color);
   }
@@ -495,6 +537,10 @@ a {
 
   .navBar .connect {
     display: none;
+  }
+
+  footer p {
+    font-size: 12px;
   }
 }
 

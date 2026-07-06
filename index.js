@@ -2,6 +2,8 @@ const menuBar = document.querySelector(".hamburger");
 const menuList = document.querySelector(".navBar nav");
 const menuItems = document.querySelectorAll(".navBar nav ul li a");
 
+const topBtn = document.querySelector("#scroll-top");
+
 let menuOpen = false;
 
 menuBar.addEventListener("click", () => {
@@ -22,3 +24,17 @@ menuItems.forEach((item) => {
     }
   });
 });
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 300) {
+    topBtn.style.display = "block"
+  } else {
+    topBtn.style.display = "none"
+  }
+})
+
+topBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+  })
+})
