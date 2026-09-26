@@ -317,9 +317,8 @@ a {
 }
 
 .heroContainers .container {
-  min-width: 220px;
-  max-width: 220px;
-  height: 380px;
+  width: 220px;
+  height: 400px;
   box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   padding: 0 10px;
@@ -346,7 +345,7 @@ a {
 }
 
 .container .text p {
-  color: #ffffffe7;
+  color: #3b82f6;
   text-transform: uppercase;
 }
 
@@ -369,6 +368,28 @@ a {
 .container .items h5 {
   font-size: medium;
   font-weight: lighter;
+}
+
+.projects .expense-list {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.projects .expense-list a {
+  font-size: large;
+  font-weight: bold;
+}
+
+.projects .expense-list .image {
+  width: 30px;
+  height: 30px;
+}
+
+.projects .expense-list .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .experience span {
@@ -427,10 +448,9 @@ footer {
   background-color: var(--text-color);
   cursor: pointer;
   display: none;
-  
+
   transition: opacity 0.3s ease;
   box-shadow: 0 0 20px #333;
-
 
   z-index: 1000;
 }
